@@ -1,17 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import "abustruct/variables.scss";
 
-html {
-  font-size: 62.5%;
-}
+@import "base/__base.scss";
 
-body {
-  background-color: rgb(42, 59, 103);
-}
+@import "layout/header";
 
-.head{
-  background-color: aquamarine;
-}
+@import "componets/links.scss";

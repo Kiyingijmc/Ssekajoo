@@ -1,21 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  background-color: rgb(42, 59, 103);
-}
-
-.head {
-  background-color: aquamarine;
-}
-
 .header {
   position: absolute;
   top: 0;
@@ -49,16 +31,4 @@ body {
   height: 8rem;
   flex: 0 0 15rem;
   margin: 2rem;
-}
-
-.links {
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 500;
-  height: 4rem;
-  padding-top: 1rem;
-  text-align: center;
-  background-color: rgb(8, 3, 80);
-  border-radius: 10%;
-  letter-spacing: 0.5rem;
-}/*# sourceMappingURL=master.css.map */
+}/*# sourceMappingURL=header.css.map */
