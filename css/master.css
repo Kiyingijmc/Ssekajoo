@@ -15,3 +15,8 @@ body {
 .head {
   background-color: aquamarine;
 }/*# sourceMappingURL=master.css.map */
+
+.nav-body{
+  display: flex;
+  background-color: #3604d7;
+}
