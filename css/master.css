@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(42, 59, 103);
+}
+
+.head {
+  background-color: aquamarine;
+}/*# sourceMappingURL=master.css.map */
