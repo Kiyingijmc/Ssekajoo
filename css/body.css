@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  height: 100rem;
+  align-items: stretch;
+  padding: 1.8rem 1rem;
+  margin: 1rem;
+}
+
+.sidebar {
+  flex: 0 0 25%;
+  border-right: 0.3rem solid rgb(255, 255, 255);
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+.sidebar__toparea {
+  flex: 0 0 20%;
+  background-color: rgb(63, 4, 4);
+}
+.sidebar__contentarea {
+  flex: 0 0 50%;
+  background-color: rgb(28, 104, 56);
+}
+.sidebar__summaryarea {
+  flex: 0 0 30%;
+  background-color: rgb(120, 115, 22);
+}
+
+.mainsection {
+  flex: 0 0 75%;
+  background-color: rgb(37, 62, 62);
+  display: flex;
+  flex-direction: column;
+}
+.mainsection__main-sliderContainer {
+  flex: 0 0 40%;
+  background-color: rgb(0, 247, 255);
+  display: flex;
+  justify-content: space-between;
+}
+.mainsection__main-sliderContainer__leftbox {
+  flex: 0 0 25%;
+  background-color: rgb(70, 87, 59);
+}
+.mainsection__main-sliderContainer__photoslider {
+  flex: 0 0 50%;
+  background-color: rgb(149, 149, 119);
+}
+.mainsection__main-sliderContainer__rightbox {
+  flex: 0 0 25%;
+  background-color: rgb(64, 34, 77);
+}
+.mainsection__maintextarea {
+  flex: 0 0 25%;
+  background-color: rgb(166, 0, 255);
+}
+.mainsection__featuresarea {
+  flex: 0 0 10%;
+  background-color: rgb(0, 255, 30);
+}
+.mainsection__secondary-slider {
+  flex: 0 0 25%;
+  background-color: rgb(179, 255, 0);
+}/*# sourceMappingURL=body.css.map */
