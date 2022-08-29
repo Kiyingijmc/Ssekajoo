@@ -1,50 +1,73 @@
 .header {
-  background-color: rgb(167, 239, 239);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: stretch;
-  height: 20rem;
-  padding: 1rem 20rem;
-  &-logo__box {
-    margin-right: 8rem;
-    background-color: rgba(80, 146, 238, 0.911);
-    flex: 0 0 28%;
-    font-family: inherit;
+  height: 80rem;
+  flex-direction: column;
+  background-color: rgb(255 255 255);
+}
+.nav {
+  // position: relative;
+  // top: 0;
+  // left: 0;
+  flex: 0 0 15%;
+  //background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  &-logobox {
+    margin-right: -15rem;
+    flex: 0 0 25%;
+  }
+  &-logo {
+    height: 19rem;
+    width: 26rem;
+  }
+  &-links {
+    //position: fixed;
+    flex: 0 0 50%;
+    align-self: center;
+    margin-right: 20rem;
+    padding: 1rem;
+    //background-color: rgb(14, 96, 96);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+  }
+  &-item {
+    height: 3.5rem;
+    background-color: rgba(4, 222, 222, 0.845);
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.65rem 0.3rem;
+  }
+  &-link {
+    text-decoration: none;
+    color: rgb(16, 0, 0);
+  }
+}
+.heading {
+  flex: 0 0 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 4rem;
+  padding: 1.5rem 2rem;
+  border-top: 0.2rem solid var(--primary-colordark1);
+  height: 70rem;
+
+  &-title {
+    flex: 0 0 60%;
     text-align: center;
   }
-  &-menu {
-    background-color: rgba(86, 187, 148, 0.911);
-    flex: 0 0 65%;
-    font-family: inherit;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-
-    &__top {
-      flex: 0 0 50%;
-      background-color: rgb(103, 126, 119);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      display: flex;
-      justify-content: space-between;
-    }
-    &__main {
-      flex: 0 0 50%;
-      background-color: rgb(44, 41, 74);
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-
-      &-tabs {
-        flex: 0 0 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        list-style: none;
-      }
-    }
+  &-img {
+    flex: 0 0 40%;
+    height: 55rem;
+    width: 75rem;
+    //size: cover;
   }
 }

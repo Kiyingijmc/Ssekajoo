@@ -1,0 +1,31 @@
+.heading-title {
+  &__para {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 3.5rem;
+  }
+  &__para3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--secondary-color);
+  }
+}
+
+.highlight {
+  position: relative;
+  color: var(--secondary-colordark);
+}
+
+.highlight::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: var(--gradient-primary);
+}

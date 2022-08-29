@@ -1,9 +1,11 @@
-@import "abustruct/variables.scss";
+@import "abustruct/variables";
 
-@import "base/__base.scss";
+@import "base/_base";
 
-@import "layout/header";
+@import "componets/button";
+@import "componets/links";
+@import "componets/typegraghy";
+
 @import "layout/body";
+@import "layout/header";
 @import "layout/footer";
-
-@import "componets/links.scss";

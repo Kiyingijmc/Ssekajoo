@@ -1,0 +1,32 @@
+.btn {
+  display: inline-block;
+  background-color: rgb(66, 207, 250);
+  font-size: 1.9rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: rgb(6, 100, 129);
+  box-shadow: 0 0.7rem 1.5rem rgba(20, 20, 20, 0.822);
+  color: rgb(150, 153, 153);
+}
+
+.btn--text {
+  display: inline-block;
+  background: none;
+  font-size: 1.9rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: rgb(66, 207, 250);
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
