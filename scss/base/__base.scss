@@ -4,17 +4,28 @@
   padding: 0 1rem;
 
   --gradient-primary: linear-gradient(to top left, #229be0, #6dc4c4);
+  --gradient-primary1: linear-gradient(to top right, #89acf3, #a0cee1);
+  --gradient-secondary: linear-gradient(to bottom right, #c0d7d8, #515658);
+  --gradient-oragered: linear-gradient(
+    to top right,
+    rgb(253, 84, 6),
+    rgb(230, 128, 65)
+  );
+  --gradient-dark: linear-gradient(to bottom right, #040e15, #160000);
+
   --primary-color: rgb(241, 143, 4);
   --primary-colorlight: rgb(246, 187, 106);
   --primary-colorlight1: rgba(235, 189, 52, 0.923);
   --primary-colordark: rgb(200, 117, 0);
   --primary-colordark1: rgb(111, 66, 2);
+  //--primary-colordark1: rgb(95, 72, 62);
 
   --secondary-color: rgba(0, 229, 255, 0.959);
   --secondary-colorlight: rgba(105, 230, 244, 0.845);
   --secondary-colorlight2: rgba(34, 233, 255, 0.5);
   --secondary-colordark: rgb(0, 153, 255);
   --secondary-colordark1: rgb(10, 142, 179);
+  --gray-dark1: rgb(95, 72, 62);
 }
 
 html {

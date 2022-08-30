@@ -12,10 +12,10 @@
 .highlight {
   position: relative;
   color: var(--secondary-colordark);
+  background: var(--gradient-oragered);
 }
 
 .highlight::after {
-  display: inline-block;
   content: "";
   position: absolute;
   bottom: 0;

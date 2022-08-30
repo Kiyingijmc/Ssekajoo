@@ -19,14 +19,24 @@
 
 .btn--text {
   display: inline-block;
-  background: none;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-family: inherit;
   font-weight: 500;
-  color: rgb(66, 207, 250);
+  color: rgb(9, 2, 59);
+  background: var(--primary-color);
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
   cursor: pointer;
+  border-radius: 10%;
   transition: all 0.3s;
+}
+.transup {
+  font-size: 2.5rem;
+  font-family: inherit;
+  font-weight: 400;
+  //color: rgb(3, 1, 23);
+  border-bottom: none;
+  transform: translateY(0.9rem);
+  background: var(--gradient-oragered);
 }

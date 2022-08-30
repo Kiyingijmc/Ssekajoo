@@ -1,6 +1,19 @@
 .footer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  background: var(--gradient-dark);
   margin: 0.5rem 1.5rem;
-  height: 20rem;
-  background-color: rgb(3, 145, 98);
+  &-1 {
+    flex: 0 0 20%;
+    text-align: center;
+    width: 100%;
+    border-bottom: 0.3rem dashed var(--gray-dark1);
+  }
+  &-2 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
 }
