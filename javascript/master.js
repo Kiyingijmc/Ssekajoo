@@ -1,4 +1,8 @@
 "use strict";
+const nav = document.querySelector(".nav");
+const tabb = document.querySelectorAll(".tabs__tab");
+const header = document.querySelector("header");
+const navheight = nav.getBoundingClientRect().height;
 //applying the faddding of the nav bar on mouse over
 const fadded = function (e) {
   const itemslist = [...document.querySelectorAll(".nav-item")];
@@ -26,7 +30,6 @@ const fadded = function (e) {
   }
 };
 const navfade = function () {
-  const nav = document.querySelector(".nav");
   nav.addEventListener("mouseover", fadded.bind(1));
   nav.addEventListener("mouseout", fadded.bind(0));
 };
@@ -53,6 +56,20 @@ const tabsfunc = function () {
     console.log(tabs);
   });
 };
+//applying a sticky navbar
+const headerCallback = function (entries) {
+  const [entry] = entries;
+  !entry.isIntersecting
+    ? nav.classList.add("sticky")
+    : nav.classList.remove("sticky");
+};
+const headerObs = new IntersectionObserver(headerCallback, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navheight}px`,
+});
+headerObs.observe(header);
+
 //calling functions
 navfade();
 tabsfunc();
