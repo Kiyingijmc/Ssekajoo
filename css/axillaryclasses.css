@@ -11,4 +11,9 @@
   margin: 0 1rem;
   background-color: rgba(255, 255, 255, 0.85);
   transform: translateY(-2.5rem) scale(0.7);
+  z-index: 11;
+}
+
+.lazy-img {
+  filter: blur(20px);
 }/*# sourceMappingURL=axillaryclasses.css.map */

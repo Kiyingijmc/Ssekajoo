@@ -2,33 +2,37 @@
   display: flex;
   height: 100rem;
   align-items: stretch;
-  padding: 1.8rem 1rem;
   margin: 1rem;
 }
 
 .sidebar {
   flex: 0 0 25%;
   border-right: 0.3rem solid rgb(255, 255, 255);
+  margin-left: -2.5rem;
   display: flex;
   align-items: stretch;
   flex-direction: column;
 }
 .sidebar__toparea {
-  flex: 0 0 20%;
+  flex: 0 0 15%;
   background-color: rgb(63, 4, 4);
 }
 .sidebar__contentarea {
-  flex: 0 0 50%;
-  background-color: rgb(28, 104, 56);
+  flex: 0 0 45%;
 }
 .sidebar__summaryarea {
-  flex: 0 0 30%;
+  flex: 0 0 40%;
   background-color: rgb(120, 115, 22);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0.3rem;
+  z-index: 0;
 }
 
 .mainsection {
   flex: 0 0 75%;
-  background: var(--gradient-secondary);
   display: flex;
   justify-content: stretch;
   align-items: stretch;

@@ -1,11 +1,15 @@
 @import "abustruct/variables";
 
 @import "base/_base";
+@import "base/variable";
 
 @import "componets/button";
 @import "componets/links";
 @import "componets/typegraghy";
 @import "componets/axillaryclasses";
+@import "componets/slider";
+@import "componets/form";
+@import "componets/scroller";
 
 @import "layout/body";
 @import "layout/header";

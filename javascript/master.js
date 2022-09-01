@@ -7,7 +7,7 @@ const navheight = nav.getBoundingClientRect().height;
 const fadded = function (e) {
   const itemslist = [...document.querySelectorAll(".nav-item")];
   const targe = e.target.closest(".nav-item");
-  console.log(targe);
+  //console.log(targe);
   if (itemslist.includes(targe)) {
     itemslist.forEach((el) => {
       const opacity = this;
@@ -53,7 +53,7 @@ const tabsfunc = function () {
 
     const dd = targe.dataset.tab;
     document.querySelector(`.tab-content--${dd}`).classList.add("display");
-    console.log(tabs);
+    // console.log(tabs);
   });
 };
 //applying a sticky navbar

@@ -4,7 +4,7 @@
   align-items: stretch;
   height: 80rem;
   flex-direction: column;
-  background-color: rgb(255 255 255);
+  background: $faded-gray;
 }
 .nav {
   // position: relative;
@@ -75,11 +75,8 @@
     flex: 0 0 60%;
     text-align: center;
   }
-  &-img {
+  &-slider {
     flex: 0 0 40%;
-    height: 55rem;
-    width: 75rem;
-    //size: cover;
   }
 }
 .block {

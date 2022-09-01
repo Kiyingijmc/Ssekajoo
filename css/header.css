@@ -70,10 +70,8 @@
   flex: 0 0 60%;
   text-align: center;
 }
-.heading-img {
+.heading-slider {
   flex: 0 0 40%;
-  height: 55rem;
-  width: 75rem;
 }
 
 .block {
