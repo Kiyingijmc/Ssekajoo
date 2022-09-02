@@ -1,13 +1,17 @@
 .form-container {
-  flex: 0 0 65%;
-  width: 70rem;
+  flex: 0 0 50%;
+  width: 70%;
   align-self: stretch;
+  background-image: $solidcolor-gradient;
+  background-size: cover;
   //background-color: rgb(6, 242, 250);
-  height: 40rem;
-  margin: 10% auto;
+  height: 30rem;
+  margin: 2rem auto;
+  border-radius: $border-radi;
 }
 
 .form {
+  margin-top: 2.5rem;
   width: 55%;
   &__group:not(:last-child) {
     margin-bottom: 2rem;
@@ -18,7 +22,7 @@
     font-family: inherit;
     color: inherit;
     padding: 1.5rem 2rem;
-    border-radius: 2px;
+    border-radius: $border-radi;
     background-color: rgba($color-white, 0.5);
     border: none;
     border-bottom: 3px solid transparent;
@@ -84,7 +88,7 @@
   &__radio-button {
     height: 3rem;
     width: 3rem;
-    border: 5px solid var(--primary-color);
+    border: 5px solid var(--secondary-color);
     border-radius: 50%;
     display: inline-block;
     position: absolute;
@@ -101,7 +105,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: var(--primary-color);
+      background-color: var(--secondary-colordark);
       opacity: 0;
       transition: opacity 0.2s;
     }

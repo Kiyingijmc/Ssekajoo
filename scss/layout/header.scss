@@ -5,6 +5,10 @@
   height: 80rem;
   flex-direction: column;
   background: $faded-gray;
+  background-position: top;
+  background-size: 450%;
+  animation: bg-animation 50s infinite alternate;
+  border-radius:$border-radi;
 }
 .nav {
   // position: relative;

@@ -8,7 +8,12 @@ const domcolor = function (bcc) {
 };
 //slider
 
-const slinding = function (selector, parent = "body", itr = 2500) {
+const slinding = function (
+  selector,
+  parent = "body",
+  itr = 2500,
+  direction = "x"
+) {
   const rt = document.querySelector(`${parent}`);
   //console.log(rt);
   const slide = [...rt.querySelectorAll(`${selector}`)];
@@ -18,7 +23,7 @@ const slinding = function (selector, parent = "body", itr = 2500) {
   const left = rt.querySelector(".left");
   let cursld = 0;
   slide.forEach((sld, i) => {
-    sld.style.transform = `translateX(${i * 100}%)`;
+    sld.style.transform = `translate${direction.toUpperCase()}(${i * 100}%)`;
   });
 
   const btn = document.querySelector(".btn");
@@ -29,7 +34,9 @@ const slinding = function (selector, parent = "body", itr = 2500) {
         cursld = 0;
       } else cursld++;
     slide.forEach((sld, i) => {
-      sld.style.transform = `translateX(${100 * (i - cursld)}%)`;
+      sld.style.transform = `translate${direction.toUpperCase()}(${
+        100 * (i - cursld)
+      }%)`;
     });
   });
   left.addEventListener("click", (e) => {
@@ -39,7 +46,9 @@ const slinding = function (selector, parent = "body", itr = 2500) {
         cursld = slide.length - 1;
       } else cursld--;
     slide.forEach((sld, i) => {
-      sld.style.transform = `translateX(${100 * (i - cursld)}%)`;
+      sld.style.transform = `translate${direction.toUpperCase()}(${
+        100 * (i - cursld)
+      }%)`;
     });
   });
   const slidecall = function (entries, observer) {
@@ -52,7 +61,7 @@ const slinding = function (selector, parent = "body", itr = 2500) {
   const slideObserver = (callback) =>
     new IntersectionObserver(callback, {
       root: null,
-      threshold: 0.2,
+      threshold: 0.05,
       rootMargin: "100px",
     });
   slide.forEach((el) => {
@@ -68,7 +77,9 @@ const slinding = function (selector, parent = "body", itr = 2500) {
 
   const sldintefuc = function () {
     slide.forEach((sld, i) => {
-      sld.style.transform = `translateX(${100 * (i - cursld)}%)`;
+      sld.style.transform = `translate${direction.toUpperCase()}(${
+        100 * (i - cursld)
+      }%)`;
     });
     if (cursld === slide.length - 1) {
       cursld = -1;

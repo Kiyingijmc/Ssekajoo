@@ -1,3 +1,11 @@
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -79,10 +87,18 @@ body {
   background: var(--gradient-oragered);
 }
 
-.heading-title__para {
+.heading-secondary {
   text-transform: uppercase;
-  color: var(--primary-color);
-  font-size: 3.5rem;
+  background-image: linear-gradient(45deg, #d04a02, #fe5d06, #ff7730, #f98649, #f29969, #f3ad87);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  animation: bg-animation 58s infinite alternate;
+}
+
+.heading-title__para {
+  font-size: 5.5rem;
 }
 .heading-title__para3 {
   text-transform: uppercase;
@@ -109,6 +125,14 @@ body {
   background-image: var(--gradient-primary);
 }
 
+.form__header {
+  font-size: 2.5rem;
+  margin: 2rem, auto;
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 0.2rem solid var(--primary-colordark);
+}
+
 .faded {
   opacity: 0.45;
   transform: scale(0.8);
@@ -122,11 +146,24 @@ body {
   margin: 0 1rem;
   background-color: rgba(255, 255, 255, 0.85);
   transform: translateY(-2.5rem) scale(0.7);
+  border-radius: 0.4rem;
   z-index: 11;
 }
 
 .lazy-img {
   filter: blur(20px);
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 2rem;
+}
+
+.u-margin-bottom-large {
+  margin-bottom: 3.5rem;
 }
 
 .slider {
@@ -139,6 +176,7 @@ body {
   overflow: hidden;
   height: 40rem;
   width: 100%;
+  border-radius: 0.4rem;
 }
 .slider__box {
   position: absolute;
@@ -150,18 +188,16 @@ body {
   bottom: 0;
   left: 0;
   text-align: center;
-  background-color: #1588a5;
   border-radius: 0.3rem;
 }
 .slider__header {
   position: absolute;
   width: 100%;
-  flex: 0 0 10%;
-  top: 0;
-  font-size: 2rem;
+  flex: 0 0 auto;
+  top: 0.5rem;
+  font-size: 2.2rem;
   text-align: center;
-  color: #0a7503;
-  background-color: #1616a5;
+  border-radius: 0.4rem;
 }
 
 .slide {
@@ -177,16 +213,18 @@ body {
   color: #ffe800;
   transform: translate Y(1rem);
   transition: all 0.6s;
+  border-radius: 0.4rem;
 }
 .slide__header {
   flex: 0 0 10%;
-  background-color: #ffe800;
+  border-radius: 0.4rem;
 }
 .slide__content {
   flex: 0 0 85%;
   display: flex;
   justify-content: space-around;
   align-items: stretch;
+  border-radius: 0.4rem;
 }
 .slide__content-text {
   background: var(--gradient-primary1);
@@ -203,18 +241,19 @@ body {
   padding: 1rem;
   height: 30rem;
   border-left: 0.35rem solid var(--primary-color);
+  border-radius: 0.4rem;
 }
 .slide_img {
   display: inline-block;
   margin-top: -1.8rem;
   flex: 0 0 100%;
   height: 30rem;
+  border-radius: 0.4rem;
 }
 
 .btnArr {
   position: absolute;
   top: 50%;
-  background-color: #2dbee3;
   text-align: center;
   padding: 0.5rem;
   width: 5rem;
@@ -231,14 +270,18 @@ body {
 }
 
 .form-container {
-  flex: 0 0 65%;
-  width: 70rem;
+  flex: 0 0 50%;
+  width: 70%;
   align-self: stretch;
-  height: 40rem;
-  margin: 10% auto;
+  background-image: linear-gradient(45deg, #fa5902, #ff7730, rgba(188, 108, 65, 0));
+  background-size: cover;
+  height: 30rem;
+  margin: 2rem auto;
+  border-radius: 0.4rem;
 }
 
 .form {
+  margin-top: 2.5rem;
   width: 55%;
 }
 .form__group:not(:last-child) {
@@ -249,7 +292,7 @@ body {
   font-family: inherit;
   color: inherit;
   padding: 1.5rem 2rem;
-  border-radius: 2px;
+  border-radius: 0.4rem;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
@@ -297,7 +340,7 @@ body {
 .form__radio-button {
   height: 3rem;
   width: 3rem;
-  border: 5px solid var(--primary-color);
+  border: 5px solid var(--secondary-color);
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -314,7 +357,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--primary-color);
+  background-color: var(--secondary-colordark);
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -342,7 +385,9 @@ body {
   width: 100%;
   height: 10.5rem;
   color: #fff500;
-  background-color: #61dbfa;
+  background-image: linear-gradient(45deg, #004cfc, #2155e2, #0472e8, #2e89eb, #4690de, #08afe7, #30c8fb, #86ddfb);
+  background-size: 400%;
+  animation: bg-animation 30s infinite alternate;
   list-style: none;
   border-radius: 2rem;
   margin: 1rem auto;
@@ -354,6 +399,25 @@ body {
   border-bottom: 0.18rem solid rgb(1, 17, 50);
 }
 
+::-webkit-scrollbar {
+  width: 2rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100vw;
+  margin-block: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff7730;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+  background-color: #fa5902;
+}
+
 .container {
   display: flex;
   height: 100rem;
@@ -363,22 +427,23 @@ body {
 
 .sidebar {
   flex: 0 0 25%;
-  border-right: 0.3rem solid rgb(255, 255, 255);
   margin-left: -2.5rem;
   display: flex;
   align-items: stretch;
   flex-direction: column;
-}
-.sidebar__toparea {
-  flex: 0 0 15%;
-  background-color: rgb(63, 4, 4);
+  /*&__toparea {
+    flex: 0 0 15%;
+    background-color: rgb(63, 4, 4);
+    border-radius: $border-radi;
+  }*/
 }
 .sidebar__contentarea {
-  flex: 0 0 45%;
+  flex: 0 0 60%;
+  border-radius: 0.4rem;
 }
 .sidebar__summaryarea {
   flex: 0 0 40%;
-  background-color: rgb(120, 115, 22);
+  border-radius: 0.4rem;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -425,6 +490,7 @@ body {
   width: 100%;
   padding: 0.6rem;
   background-color: red;
+  border-radius: 0.4rem;
 }
 
 .display {
@@ -437,7 +503,11 @@ body {
   align-items: stretch;
   height: 80rem;
   flex-direction: column;
-  background: linear-gradient(to bottom right, #898f8f, #262c2f);
+  background: linear-gradient(42deg, #aabac2, #89a2ae, #80929b, #627985, #43545d, #2a3d46, #17252d, #0b171c, #051015, #060606);
+  background-position: top;
+  background-size: 450%;
+  animation: bg-animation 50s infinite alternate;
+  border-radius: 0.4rem;
 }
 
 .nav {
@@ -521,17 +591,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  background: var(--gradient-dark);
   margin: 0.5rem 1.5rem;
+  border-radius: 0.4rem;
 }
 .footer-1 {
   flex: 0 0 auto;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 80rem;
+  height: 84rem;
   border-bottom: 0.3rem dashed var(--gray-dark1);
 }
 .footer-2 {
+  border-radius: 0.4rem;
   flex: 0 0 auto;
   width: 100%;
 }/*# sourceMappingURL=master.css.map */

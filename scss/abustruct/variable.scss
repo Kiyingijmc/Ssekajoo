@@ -1,0 +1,63 @@
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+$color-secondary-dark--1: #fa5902;
+
+$color-tertiary-light: #30c8fb;
+$color-tertiary-dark: #0472e8;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+//gredients
+$faded-gray: linear-gradient(
+  42deg,
+  #aabac2,
+  #89a2ae,
+  #80929b,
+  #627985,
+  #43545d,
+  #2a3d46,
+  #17252d,
+  #0b171c,
+  #051015,
+  #060606
+);
+
+//text animation background img
+$orangered-fade: linear-gradient(
+  45deg,
+  #d04a02,
+  #fe5d06,
+  #ff7730,
+  #f98649,
+  #f29969,
+  #f3ad87
+);
+$blue-fade: linear-gradient(
+  45deg,
+  #004cfc,
+  #2155e2,
+  #0472e8,
+  #2e89eb,
+  #4690de,
+  #08afe7,
+  #30c8fb,
+  #86ddfb
+);
+
+$solidcolor-gradient: linear-gradient(
+  45deg,
+  $color-secondary-dark--1,
+  $color-secondary-dark,
+  #bc6c4100
+);
+
+$default-font-size: 1.6rem;
+$border-radi: 0.4rem;

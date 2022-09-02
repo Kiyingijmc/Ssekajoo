@@ -1,8 +1,15 @@
+.heading-secondary {
+  text-transform: uppercase;
+  background-image: $orangered-fade;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  animation: bg-animation 58s infinite alternate;
+}
 .heading-title {
   &__para {
-    text-transform: uppercase;
-    color: var(--primary-color);
-    font-size: 3.5rem;
+    font-size: 5.5rem;
   }
   &__para3 {
     text-transform: uppercase;
@@ -28,4 +35,11 @@
   opacity: 0.7;
   transform: scale(1.07, 1.05) skewX(-15deg);
   background-image: var(--gradient-primary);
+}
+.form__header {
+  font-size: 2.5rem;
+  margin: 2rem, auto;
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 0.2rem solid var(--primary-colordark);
 }
