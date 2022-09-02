@@ -90,28 +90,34 @@ const slinding = function (
   sldimter();
 };
 //removing lazy class and displayong the image
-const lazyloader = [...document.querySelectorAll(".slide_img")];
+const lazyloader = [...document.querySelectorAll(".lazy-img")];
 const slideImgDis = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
   if (entry.target.isIntersecting) return;
 
   entry.target.src = entry.target.dataset.src;
-  console.log("kiyigi");
   entry.target.addEventListener("load", () => {
     entry.target.classList.remove("lazy-img");
   });
 
   observer.unobserve(entry.target);
-  console.log("james");
 };
 
 const loadimg = new IntersectionObserver(slideImgDis, {
   root: null,
-  threshold: 0.05,
+  threshold: 0.25,
 });
 lazyloader.forEach((el) => {
   loadimg.observe(el);
 });
 slinding(".slide", ".heading-slider", 3500);
 slinding(".slide", ".sidebar-slider");
+console.log(lazyloader);
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".img-circle")) return;
+  const imageCircle = e.target;
+  imageCircle.src = imageCircle.dataset.src;
+  imageCircle.addEventListener("load", () =>
+    imageCircle.classList.remove("lazy-img")
+  );
+});

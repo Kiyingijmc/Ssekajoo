@@ -144,14 +144,14 @@ body {
   left: 0;
   width: 100%;
   margin: 0 1rem;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(47, 198, 248, 0.6588235294);
   transform: translateY(-2.5rem) scale(0.7);
   border-radius: 0.4rem;
   z-index: 11;
 }
 
 .lazy-img {
-  filter: blur(20px);
+  filter: blur(1rem);
 }
 
 .u-margin-bottom-small {
@@ -273,7 +273,7 @@ body {
   flex: 0 0 50%;
   width: 70%;
   align-self: stretch;
-  background-image: linear-gradient(45deg, #fa5902, #ff7730, rgba(188, 108, 65, 0));
+  background-image: linear-gradient(45deg, #fa5902, rgba(255, 120, 48, 0.7333333333), rgba(255, 255, 255, 0));
   background-size: cover;
   height: 30rem;
   margin: 2rem auto;
@@ -366,37 +366,63 @@ body {
 }
 .scroller {
   display: flex;
+  flex-direction: column;
   position: relative;
   margin: 0.2rem 0;
   height: 35rem;
   top: 0;
 }
+.scroller__header {
+  font-size: 2rem;
+  margin: 0.5rem auto;
+}
 .scroller-content {
   position: relative;
+  flex: 0 0 90%;
   display: block;
   top: 0;
   left: 0;
   width: 100%;
   margin: 1rem auto;
+  margin-top: 1rem;
   overflow: scroll;
 }
 
 .scroll {
   width: 100%;
-  height: 10.5rem;
+  height: 14rem;
   color: #fff500;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0.4rem;
   background-image: linear-gradient(45deg, #004cfc, #2155e2, #0472e8, #2e89eb, #4690de, #08afe7, #30c8fb, #86ddfb);
   background-size: 400%;
   animation: bg-animation 30s infinite alternate;
   list-style: none;
   border-radius: 2rem;
   margin: 1rem auto;
+  transition: all 0.3s ease-in;
+  overflow: hidden;
+}
+.scroll__img {
+  flex: 0 0 auto;
+  border-radius: 50%;
 }
 
 .scroll:not(:last-child) {
   margin-bottom: 0.2rem;
   box-shadow: 0 1rem 1.5rem rgba(1, 23, 29, 0.9411764706);
   border-bottom: 0.18rem solid rgb(1, 17, 50);
+}
+
+.scroll:hover {
+  width: 100%;
+  height: 40rem;
+  color: #fff500;
+  background-image: linear-gradient(45deg, #fa5902, rgba(255, 120, 48, 0.7333333333), rgba(255, 255, 255, 0));
+  background-size: 700%;
+  animation: bg-animation 25s infinite alternate;
 }
 
 ::-webkit-scrollbar {
@@ -416,6 +442,13 @@ body {
 ::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:active {
   background-color: #fa5902;
+}
+
+.img-circle {
+  border-radius: 48%;
+  height: 13rem;
+  width: 13rem;
+  transition: all 0.2s;
 }
 
 .container {

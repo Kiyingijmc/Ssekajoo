@@ -1,3 +1,4 @@
+$color-transparent: #2fc6f8a8;
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
 $color-secondary-dark--1: #fa5902;
@@ -55,8 +56,8 @@ $blue-fade: linear-gradient(
 $solidcolor-gradient: linear-gradient(
   45deg,
   $color-secondary-dark--1,
-  $color-secondary-dark,
-  #bc6c4100
+  #ff7830bb,
+  #ffffff00
 );
 
 $default-font-size: 1.6rem;
