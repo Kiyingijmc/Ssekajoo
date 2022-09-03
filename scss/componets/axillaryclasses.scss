@@ -14,6 +14,21 @@
   border-radius: $border-radi;
   z-index: 11;
 }
+.section {
+  opacity: 0;
+  transform: scale(0.5) translateY(5rem) skewX(15deg);
+}
+
+section {
+  transition: all 0.5s ease-in-out;
+}
+.form-away {
+  transform: translateX(100rem) scale(0.7);
+  opacity: 0.7;
+}
+form {
+  transition: all 0.8s;
+}
 .lazy-img {
   filter: blur(1rem);
 }
@@ -27,4 +42,75 @@
 
 .u-margin-bottom-large {
   margin-bottom: 3.5rem;
+}
+
+.roll-track {
+  //width: 0.2rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 0.02rem;
+  border-radius: 100vw;
+  margin-block: 0.6rem;
+  //background-color: whitesmoke;
+}
+.roll-btn {
+  // width: 0.2rem;
+  // height: 100vh;
+  margin-right: 0.02rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-radius: 100vw;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  animation: animate 5s linear infinite;
+}
+::-webkit-scrollbar {
+  width: 0.01rem;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.roll-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  margin-right: 0.02rem;
+  left: 0;
+  height: 100%;
+  //width: 100%;
+  border-radius: 100vw;
+  background: linear-gradient(
+    90deg,
+    #004cfc,
+    #2155e2,
+    #0472e8,
+    #2e89eb,
+    #4690de,
+    #08afe7,
+    #30c8fb,
+    #86ddfb
+  );
+  filter: blur(10px);
+}
+.roll-btn::after {
+  margin-right: 0.02rem;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100vw;
+  height: 100%;
+  //width: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(30px);
 }

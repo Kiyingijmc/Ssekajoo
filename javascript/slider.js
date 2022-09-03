@@ -51,11 +51,13 @@ const slinding = function (
       }%)`;
     });
   });
+  ///////////
+  ///////
+  //giving slides bacground color
   const slidecall = function (entries, observer) {
     const [entry] = entries;
     if (!entry.isIntersecting) return;
-    domcolor(entry.target);
-    console.log(entry);
+    //domcolor(entry.target);
     entry.target.style.opacity = 1;
   };
   const slideObserver = (callback) =>
@@ -73,7 +75,10 @@ const slinding = function (
   //  return acc;
   //  },0)*/
 
-  let cx = 0;
+  ///////////////
+  //////////
+  ///
+  //auto sliding
 
   const sldintefuc = function () {
     slide.forEach((sld, i) => {
@@ -89,35 +94,106 @@ const slinding = function (
   const sldimter = () => setInterval(sldintefuc, itr);
   sldimter();
 };
+///////////////
+//////////
+//////
 //removing lazy class and displayong the image
 const lazyloader = [...document.querySelectorAll(".lazy-img")];
+
 const slideImgDis = function (entries, observer) {
   const [entry] = entries;
-  if (entry.target.isIntersecting) return;
+  if (!entry.isIntersecting) return;
+  if (entry.target.classList.contains("slide_img")) {
+    entry.target.src = entry.target.dataset.src;
 
-  entry.target.src = entry.target.dataset.src;
-  entry.target.addEventListener("load", () => {
-    entry.target.classList.remove("lazy-img");
-  });
+    entry.target.addEventListener("load", () => {
+      entry.target.classList.remove("lazy-img");
+    });
+  }
+  entry.target.classList.remove("lazy-img");
 
   observer.unobserve(entry.target);
 };
+const obsOptions = (rot) => {
+  const rote = document.querySelector(rot);
+  const loadimg = new IntersectionObserver(slideImgDis, {
+    root: rote,
+    threshold: 0.1,
+    //rootMargin: "-40px",
+  });
+  lazyloader.forEach((el) => {
+    loadimg.observe(el);
+  });
+};
 
-const loadimg = new IntersectionObserver(slideImgDis, {
-  root: null,
-  threshold: 0.25,
-});
+/*const loadimg = (rot)=>{new IntersectionObserver(
+  slideImgDis,
+  obsOptions(rot)
+);
 lazyloader.forEach((el) => {
   loadimg.observe(el);
 });
+}*/
+//////////
+//////
+///
+//removing the lazy class on vissible clips of the scroller one loading of the web page
+const sli = document.querySelector(".scroller");
+const sro = document.querySelectorAll(".scroll");
+
+sro.forEach((el) => {
+  if (
+    sli.getBoundingClientRect().top + 50 < el.getBoundingClientRect().top &&
+    sli.getBoundingClientRect().bottom + 50 > el.getBoundingClientRect().bottom
+  ) {
+    el.querySelector("img").classList.remove("lazy-img");
+  }
+});
+//console.log(sli.getBoundingClientRect());
+//console.log(sro.getBoundingClientRect());
+////////
+///
+obsOptions(".scroller-content");
+obsOptions(".slider__boxe-1");
+obsOptions(".slider__boxe-2");
 slinding(".slide", ".heading-slider", 3500);
 slinding(".slide", ".sidebar-slider");
-console.log(lazyloader);
+//console.log(lazyloader);
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".img-circle")) return;
   const imageCircle = e.target;
   imageCircle.src = imageCircle.dataset.src;
-  imageCircle.addEventListener("load", () =>
-    imageCircle.classList.remove("lazy-img")
-  );
+});
+
+const sectionVanish = document.querySelectorAll("section");
+sectionVanish.forEach((el) => {
+  el.querySelector(".form-container")
+    ? el.querySelector(".form-container").classList.add("form-away")
+    : el;
+  el.classList.add("section");
+});
+
+const sectionObs = new IntersectionObserver(
+  (entries, observe) => {
+    const [entry] = entries;
+    console.log(entry);
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.remove("section");
+    entry.target.querySelector(".form-container")
+      ? entry.target
+          .querySelector(".form-container")
+          .classList.remove("form-away")
+      : entry.target;
+
+    observe.unobserve(entry.target);
+  },
+  {
+    root: null,
+    threshold: 0.2,
+    rootMargin: "-60px",
+  }
+);
+sectionVanish.forEach((el) => {
+  sectionObs.observe(el);
 });
