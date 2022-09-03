@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  --bg-grade: linear-gradient(
+    to bottom right,
+    rgba(4, 100, 127, 0.886),
+    rgba(4, 100, 127, 0.65),
+    rgba(4, 100, 127, 0.5),
+    rgba(4, 100, 127, 0.25),
+    rgba(4, 100, 127, 0.1),
+    rgba(4, 100, 127, 0.05),
+    rgba(4, 100, 127, 0.01),
+    rgba(221, 232, 234, 0.237),
+    rgba(4, 100, 127, 0)
+  );
+}
+/* .bbt {
+  position: absolute;
+  top: 10rem;
+  left: 20rem;
+  height: 2.2rem;
+  width: 9rem;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: rgb(2, 66, 45);
+  border-radius: 0.5rem;
+} */
+
+.drop {
+  position: relative;
+  display: block;
+  right: 1rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.drop-container {
+  display: none;
+  opacity: 0;
+  height: 10rem;
+  width: 15rem;
+  border-radius: 0.3rem;
+  list-style: none;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  align-items: stretch;
+  /* background: var(--bg-grade); */
+  transition: all 0.4s ease;
+  overflow: scroll;
+}
+
+.drop__content {
+  flex: 0 0 auto;
+  display: block;
+  width: 80%;
+  height: 4rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  /* background-color: rgba(0, 213, 255, 0.6); */
+  color: #fa5902;
+  padding: 1rem;
+  margin: 0.01rem auto;
+  font-size: 1.3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  box-shadow: 0 0.2rem 0.2rem 0.1rem #0b171cdd;
+}
+
+.drop__content:not(:last-child) {
+  margin-bottom: 0.5rem;
+  border-bottom: 0.2rem solid rgb(39, 0, 0);
+  box-shadow: 0 0.2rem 0.2rem 0.1rem #0b171cdd;
+}
+.drop__content:hover {
+  transform: scale(1.1);
+}
+.drop__content:not(:last-child):hover {
+  margin-bottom: 0.6rem;
+  border-bottom: 0.3rem solid rgb(22, 0, 0);
+  box-shadow: 0.2 0.3rem 0.4rem 0.1rem #020607dd;
+}
+.drop-container__parent {
+  z-index: 3;
+}
+.drop-container__parent:hover {
+  transform: scale(1.1);
+}
+
+.drop__container-inner {
+  width: 20rem;
+  position: relative;
+  display: none;
+  height: 16rem;
+  padding: 1rem 0.6rem;
+  margin-left: -3.3rem;
+  background-color: transparent;
+}
+
+.drop__content-inner {
+  width: 70%;
+  height: 3rem;
+  box-shadow: none;
+  color: #fe6a00;
+  font-size: 1.1rem;
+  margin: 0.3rem auto;
+  background-color: rgba(0, 13, 13, 0.667);
+}
+
+.droperhide {
+  width: 22rem;
+  position: relative;
+  display: flex;
+  height: 16rem;
+  padding: 1rem 0.6rem;
+  box-shadow: 0 1rem 1rem 0.4rem #051315c9;
+  opacity: 1;
+}
+.droperhide::after {
+  content: "";
+  width: 22rem;
+  filter: blur(3rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16rem;
+  padding: 1rem 0.6rem;
+  box-shadow: 0 1rem 1rem 0.4rem #051315c9;
+  opacity: 1;
+  background: var(--bg-grade);
+}
+
+.displaydrop {
+  opacity: 1;
+  margin: 1rem auto;
+  display: flex;
+  /* margin-left: -2rem; */
+}
+.hide {
+  opacity: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.2rem;
+}
+.drop-container::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0rem;
+}
+.drop-container::-webkit-scrollbar-track {
+  border-radius: 100vw;
+  margin-block: 0.2rem;
+}
+
+.drop-container::-webkit-scrollbar-thumb {
+  background-color: rgb(160, 250, 49);
+  border-radius: 100vw;
+}
+
+.drop-container::-webkit-scrollbar-thumb:hover,
+.drop-container::-webkit-scrollbar-thumb:active {
+  background-color: rgb(98, 255, 0);
+}

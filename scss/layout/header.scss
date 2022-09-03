@@ -8,7 +8,7 @@
   background-position: top;
   background-size: 450%;
   animation: bg-animation 50s infinite alternate;
-  border-radius:$border-radi;
+  border-radius: $border-radi;
 }
 .nav {
   // position: relative;
@@ -19,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  // flex-direction: column;
 
   &-logobox {
     margin-right: -15rem;
@@ -48,11 +49,16 @@
     font-size: 1.8rem;
     text-align: center;
     padding: 0.65rem 0.3rem;
-    flex: 0 0 auto;
+    flex: 0 0 20%;
     transition: all 0.3s;
   }
   &-item:not(:last-child) {
     margin-right: 1.2rem;
+    margin-top: -10rem;
+  }
+  &-item:last-child {
+    margin-right: -18rem;
+    flex: 0 1 auto;
   }
   &-item:not(:last-child):hover {
     background-color: var(--secondary-colordark1);
@@ -81,6 +87,7 @@
   }
   &-slider {
     flex: 0 0 40%;
+    width: 50%;
   }
 }
 .block {
@@ -89,3 +96,9 @@
 .what {
   order: 4;
 }
+
+// .whatwedo {
+//   align-self: center;
+//   margin-top: 2rem;
+//   display: flex;
+// }

@@ -5,8 +5,200 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        /* box-sizing: border-box;
+        padding: 0;
+        margin: 0; */
+        --bg-grade: linear-gradient(
+          to bottom right,
+          rgba(4, 100, 127, 0.886),
+          rgba(4, 100, 127, 0.65),
+          rgba(4, 100, 127, 0.5),
+          rgba(4, 100, 127, 0.25),
+          rgba(4, 100, 127, 0.1),
+          rgba(4, 100, 127, 0.05),
+          rgba(4, 100, 127, 0.01),
+          rgba(221, 232, 234, 0.237),
+          rgba(4, 100, 127, 0)
+        );
+      }
+      .bbt {
+        position: absolute;
+        top: 10rem;
+        left: 20rem;
+        height: 2.2rem;
+        width: 9rem;
+        font-size: 1.6rem;
+        text-align: center;
+        background-color: rgb(2, 66, 45);
+        border-radius: 0.5rem;
+      }
+      .drop-container {
+        display: none;
+        margin-top: 3rem;
+        opacity: 0;
+        height: 10rem;
+        width: 15rem;
+        border-radius: 0.3rem;
+        list-style: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        /* background: var(--bg-grade); */
+        transform: translateY(-2rem);
+        transition: all 0.4s ease;
+        overflow: scroll;
+      }
+
+      .drop__content {
+        flex: 0 0 auto;
+        display: block;
+        width: 80%;
+        height: 4rem;
+        text-align: center;
+        border-radius: 0.3rem;
+        /* background-color: rgba(0, 213, 255, 0.6); */
+        color: #fa5902;
+        padding: 1rem;
+        margin: 0.01rem auto;
+        font-size: 1.3rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        box-shadow: 0 0.2rem 0.2rem 0.1rem #0b171cdd;
+      }
+
+      .drop__content:not(:last-child) {
+        margin-bottom: 0.5rem;
+        border-bottom: 0.2rem solid rgb(39, 0, 0);
+        box-shadow: 0 0.2rem 0.2rem 0.1rem #0b171cdd;
+      }
+      .drop__content:hover {
+        transform: translateY(-0.3rem) scale(1.1);
+      }
+      .drop__content:not(:last-child):hover {
+        margin-bottom: 0.6rem;
+        border-bottom: 0.3rem solid rgb(22, 0, 0);
+        box-shadow: 0.2 0.3rem 0.4rem 0.1rem #020607dd;
+      }
+      .drop-container:hover {
+        transform: scale(1.1);
+      }
+
+      .drop__container-inner {
+        width: 20rem;
+        position: relative;
+        display: none;
+        height: 16rem;
+        padding: 1rem 0.6rem;
+        margin-left: -3.3rem;
+        background-color: transparent;
+      }
+
+      .drop__content-inner {
+        width: 70%;
+        height: 3rem;
+        box-shadow: none;
+        color: #fe6a00;
+        font-size: 1.1rem;
+        margin: 0.3rem auto;
+        background-color: rgba(0, 13, 13, 0.667);
+      }
+
+      .droperhide {
+        width: 22rem;
+        position: relative;
+        display: flex;
+        height: 16rem;
+        padding: 1rem 0.6rem;
+        box-shadow: 0 1rem 1rem 0.4rem #051315c9;
+        opacity: 1;
+      }
+      .droperhide::after {
+        content: "";
+        width: 22rem;
+        position: absolute;
+        filter: blur(3rem);
+        top: 0;
+        left: 0;
+        height: 16rem;
+        padding: 1rem 0.6rem;
+        box-shadow: 0 1rem 1rem 0.4rem #051315c9;
+        opacity: 1;
+        background: var(--bg-grade);
+      }
+
+      .display {
+        opacity: 1;
+        display: flex;
+        margin-left: -2rem;
+      }
+      .hide {
+        opacity: 0;
+      }
+
+      ::-webkit-scrollbar {
+        width: 0.6rem;
+        height: 0.2rem;
+      }
+      .drop-container::-webkit-scrollbar {
+        width: 0.25rem;
+        height: 0rem;
+      }
+      .drop-container::-webkit-scrollbar-track {
+        border-radius: 100vw;
+        margin-block: 0.2rem;
+      }
+
+      .drop-container::-webkit-scrollbar-thumb {
+        background-color: rgb(160, 250, 49);
+        border-radius: 100vw;
+      }
+
+      .drop-container::-webkit-scrollbar-thumb:hover,
+      .drop-container::-webkit-scrollbar-thumb:active {
+        background-color: rgb(98, 255, 0);
+      }
+    </style>
   </head>
   <body>
-    kiyinhi
+    <div class="bbt nav-drop">
+      contact us
+      <span class="drop"
+        >D
+        <ul class="drop-container" data-order="top">
+          <li class="drop__content drop__content--1">activities</li>
+          <li class="drop__content drop__content--2">pros</li>
+          <li class="drop__content drop__content--3">docum</li>
+          <li class="drop__content drop__content--">
+            lives
+            <span class="drop drop-inner">
+              <ul
+                class="drop-container drop__container-inner"
+                data-order="inner--1"
+              >
+                <li
+                  class="drop__content drop__content--1 drop__content-inner drop-inner--1"
+                >
+                  iner1
+                </li>
+                <li
+                  class="drop__content drop__content--1 drop__content-inner drop-inner--2"
+                >
+                  inner2
+                </li>
+                <li
+                  class="drop__content drop__content--1 drop__content-inner drop-inner-3"
+                >
+                  inner3
+                </li>
+              </ul>
+            </span>
+          </li>
+        </ul>
+      </span>
+    </div>
+    <script src="../javascript/dropdown.js"></script>
   </body>
 </html>
