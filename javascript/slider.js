@@ -57,7 +57,7 @@ const slinding = function (
   const slidecall = function (entries, observer) {
     const [entry] = entries;
     if (!entry.isIntersecting) return;
-    //domcolor(entry.target);
+    //domcolor(entry.target); //applying the auto background color
     entry.target.style.opacity = 1;
   };
   const slideObserver = (callback) =>
@@ -118,8 +118,8 @@ const obsOptions = (rot) => {
   const rote = document.querySelector(rot);
   const loadimg = new IntersectionObserver(slideImgDis, {
     root: rote,
-    threshold: 0.1,
-    //rootMargin: "-40px",
+    threshold: 1,
+    rootMargin: "0px",
   });
   lazyloader.forEach((el) => {
     loadimg.observe(el);
@@ -156,7 +156,7 @@ sro.forEach((el) => {
 obsOptions(".scroller-content");
 obsOptions(".slider__boxe-1");
 obsOptions(".slider__boxe-2");
-slinding(".slide", ".heading-slider", 3500);
+slinding(".slide", ".heading-slider", 6000);
 slinding(".slide", ".sidebar-slider");
 //console.log(lazyloader);
 document.addEventListener("click", (e) => {
@@ -197,3 +197,26 @@ const sectionObs = new IntersectionObserver(
 sectionVanish.forEach((el) => {
   sectionObs.observe(el);
 });
+
+const imgroot = document.querySelector(".heading-slider");
+const headerimage = document.querySelectorAll(".slide__heading-img");
+const headerimageFunc = function (entries, observer) {
+  const [entry] = entries;
+  // entry.target.classList.contains("animate") &&
+  //   entry.target.classList.remove("animate");
+  // if (entry.target.classList.contains("animate")) {
+  //   entry.target.classList.remove("animate");
+  // }
+
+  entry.target.style.animation = `imageScaling 10s linear alternate`;
+  console.log("fgort");
+  observer.unobserve(entry.target);
+};
+
+const headerimageObs = new IntersectionObserver(headerimageFunc, {
+  root: imgroot,
+  threshold: 1,
+  //rootMargin: "-90px",
+});
+
+headerimage.forEach((el) => headerimageObs.observe(el));

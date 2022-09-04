@@ -21,6 +21,10 @@
     text-align: center;
     border-radius: 0.3rem;
   }
+  &__box-1 {
+    flex: 0 0 100%;
+    height: 100%;
+  }
   &__header {
     position: absolute;
     width: 100%;
@@ -29,6 +33,10 @@
     font-size: 2.2rem;
     text-align: center;
     border-radius: $border-radi;
+    &-heading {
+      width: 0%;
+      display: none;
+    }
   }
 }
 .slide {
@@ -56,12 +64,31 @@
     justify-content: space-around;
     align-items: stretch;
     border-radius: $border-radi;
+    &-heading {
+      flex: 0 0 100%;
+      display: block;
+      height: 100%;
+    }
     &-text {
-      background: var(--gradient-primary1);
+      //background: var(--gradient-primary1);
       margin-right: 0.6rem;
       margin-top: 2rem;
       width: 40%;
+      &__heading {
+        display: inline-block;
+        position: relative;
+        margin: 2rem auto;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+
+        //background-image: var(--bg-grade);
+        z-index: 2;
+      }
     }
+
     &-album {
       display: flex;
       align-items: stretch;
@@ -72,6 +99,17 @@
       height: 30rem;
       border-left: 0.35rem solid var(--primary-color);
       border-radius: $border-radi;
+      &__heading {
+        display: block;
+        position: absolute;
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin-left: -2rem;
+        //margin: 1rem;
+        z-index: 0;
+      }
     }
   }
   &_img {
@@ -84,6 +122,13 @@
     height: 30rem;
     border-radius: $border-radi;
   }
+}
+.heading-slide {
+  display: block;
+  height: 100%;
+  // justify-content: center;
+  // flex-direction: column;
+  text-align: center;
 }
 .btnArr {
   position: absolute;
@@ -99,4 +144,19 @@
 }
 .left {
   left: 1rem;
+}
+
+.slide__heading-img {
+  display: block;
+  position: absolute;
+  margin-top: 0;
+  margin: 1.2rem 0rem;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  //   animation: imageScaling 8s infinite alternate;
 }

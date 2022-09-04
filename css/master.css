@@ -6,6 +6,16 @@
     background-position: right;
   }
 }
+@keyframes imageScaling {
+  0% {
+    transform: scale(0.8);
+    filter: brightness(0.8);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,6 +29,18 @@
     rgb(230, 128, 65)
   );
   --gradient-dark: linear-gradient(to bottom right, #040e15, #160000);
+  --bg-grade: linear-gradient(
+    to bottom right,
+    rgba(4, 100, 127, 0.886),
+    rgba(4, 100, 127, 0.65),
+    rgba(4, 100, 127, 0.5),
+    rgba(4, 100, 127, 0.25),
+    rgba(4, 100, 127, 0.1),
+    rgba(4, 100, 127, 0.05),
+    rgba(4, 100, 127, 0.01),
+    rgba(221, 232, 234, 0.237),
+    rgba(4, 100, 127, 0)
+  );
   --primary-color: rgb(241, 143, 4);
   --primary-colorlight: rgb(246, 187, 106);
   --primary-colorlight1: rgba(235, 189, 52, 0.923);
@@ -133,6 +155,21 @@ body {
   border-top: 0.2rem solid var(--primary-colordark);
 }
 
+.heading-img__details {
+  position: relative;
+  top: 20rem;
+  margin: 1rem auto;
+  width: 60%;
+  font-size: 1.8rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 2.8rem;
+  font-weight: 600;
+  color: #eee;
+  border-bottom: 0.3rem solid #fa5902;
+  border-top: 0.3rem solid #fa5902;
+  text-align: center;
+}
+
 .faded {
   opacity: 0.45;
   transform: scale(0.8);
@@ -240,6 +277,10 @@ form {
   filter: blur(30px);
 }
 
+.animate {
+  animation: imageScaling 10s linear alternate;
+}
+
 .slider {
   position: relative;
   display: flex;
@@ -264,6 +305,10 @@ form {
   text-align: center;
   border-radius: 0.3rem;
 }
+.slider__box-1 {
+  flex: 0 0 100%;
+  height: 100%;
+}
 .slider__header {
   position: absolute;
   width: 100%;
@@ -272,6 +317,10 @@ form {
   font-size: 2.2rem;
   text-align: center;
   border-radius: 0.4rem;
+}
+.slider__header-heading {
+  width: 0%;
+  display: none;
 }
 
 .slide {
@@ -300,11 +349,26 @@ form {
   align-items: stretch;
   border-radius: 0.4rem;
 }
+.slide__content-heading {
+  flex: 0 0 100%;
+  display: block;
+  height: 100%;
+}
 .slide__content-text {
-  background: var(--gradient-primary1);
   margin-right: 0.6rem;
   margin-top: 2rem;
   width: 40%;
+}
+.slide__content-text__heading {
+  display: inline-block;
+  position: relative;
+  margin: 2rem auto;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
 }
 .slide__content-album {
   display: flex;
@@ -317,11 +381,27 @@ form {
   border-left: 0.35rem solid var(--primary-color);
   border-radius: 0.4rem;
 }
+.slide__content-album__heading {
+  display: block;
+  position: absolute;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-left: -2rem;
+  z-index: 0;
+}
 .slide_img {
   margin-top: -1.8rem;
   flex: 0 0 100%;
   height: 30rem;
   border-radius: 0.4rem;
+}
+
+.heading-slide {
+  display: block;
+  height: 100%;
+  text-align: center;
 }
 
 .btnArr {
@@ -340,6 +420,20 @@ form {
 
 .left {
   left: 1rem;
+}
+
+.slide__heading-img {
+  display: block;
+  position: absolute;
+  margin-top: 0;
+  margin: 1.2rem 0rem;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
 }
 
 .form-container {
@@ -616,9 +710,9 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  height: 80rem;
+  height: 90rem;
   flex-direction: column;
-  background: linear-gradient(42deg, #aabac2, #89a2ae, #80929b, #627985, #43545d, #2a3d46, #17252d, #0b171c, #051015, #060606);
+  background: linear-gradient(42deg, #7f9aa7, #80929b, rgb(114, 134, 144), #43545d, #2a3d46, #17252d, #0b171c, #051015, #070707);
   background-position: top;
   background-size: 450%;
   animation: bg-animation 50s infinite alternate;
@@ -630,6 +724,7 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  border-bottom: 0.6rem solid red;
 }
 .nav-logobox {
   margin-right: -15rem;
@@ -663,6 +758,7 @@ form {
 .nav-item:not(:last-child) {
   margin-right: 1.2rem;
   margin-top: -10rem;
+  border-radius: 25rem;
 }
 .nav-item:last-child {
   margin-right: -18rem;
@@ -679,23 +775,22 @@ form {
 }
 
 .heading {
-  flex: 0 0 50%;
+  flex: 0 0 auto;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   margin-right: 4rem;
   padding: 1.5rem 2rem;
   border-top: 0.2rem solid var(--primary-colordark1);
   height: 70rem;
+  background-color: rgb(89, 0, 205);
 }
 .heading-title {
-  flex: 0 0 60%;
   text-align: center;
 }
 .heading-slider {
-  flex: 0 0 40%;
-  width: 50%;
+  width: 75%;
+  margin: 3rem auto;
+  height: 80%;
 }
 
 .block {

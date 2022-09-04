@@ -114,3 +114,6 @@ form {
   background: linear-gradient(to top, #008aff, #00ffe7);
   filter: blur(30px);
 }
+.animate {
+  animation: imageScaling 10s linear alternate;
+}
