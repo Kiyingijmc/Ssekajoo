@@ -73,5 +73,3 @@ headerObs.observe(header);
 //calling functions
 navfade();
 tabsfunc();
-
-

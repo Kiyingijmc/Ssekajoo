@@ -1,0 +1,33 @@
+.icon {
+  float: right;
+  fill: $color-secondary-dark--1;
+  height: 4.5rem;
+  width: 4.5rem;
+  position: relative;
+  padding: 0.2rem auto;
+  right: 0;
+  z-index: 100;
+  top: 0;
+}
+
+.icon:hover {
+  fill: $color-secondary-dark--1;
+}
+
+.icon:active {
+  fill: $color-secondary-dark--2;
+}
+
+.iconslide {
+  height: 10rem;
+  width: 10rem;
+  transition: all 0.3s;
+}
+
+.iconslide:hover {
+  fill: $color-secondary-dark--1;
+}
+.iconslide:active {
+  fill: $color-secondary-dark--2;
+  transform: translateY(0.6rem);
+}

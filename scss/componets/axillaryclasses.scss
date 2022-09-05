@@ -1,16 +1,16 @@
 .faded {
-  opacity: 0.45;
-  transform: scale(0.8);
+  //opacity: 0.45;
+  //transform: scale(0.8);
 }
 .sticky {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  margin: 0 1rem;
+  margin: 1.5rem 1rem;
   //background-color: rgba(255, 255, 255, 0.85);
   background-color: $color-transparent;
-  transform: translateY(-2.5rem) scale(0.7);
+  transform: translateY(-2.5rem) scale(0.9);
   border-radius: $border-radi;
   z-index: 11;
 }
@@ -116,4 +116,7 @@ form {
 }
 .animate {
   animation: imageScaling 10s linear alternate;
+}
+.flexdirection {
+  flex-direction: column;
 }

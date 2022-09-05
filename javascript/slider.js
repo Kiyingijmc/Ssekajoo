@@ -157,7 +157,7 @@ obsOptions(".scroller-content");
 obsOptions(".slider__boxe-1");
 obsOptions(".slider__boxe-2");
 slinding(".slide", ".heading-slider", 6000);
-slinding(".slide", ".sidebar-slider");
+// slinding(".slide", ".sidebar-slider");
 //console.log(lazyloader);
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".img-circle")) return;

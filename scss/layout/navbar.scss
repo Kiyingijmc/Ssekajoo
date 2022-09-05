@@ -1,0 +1,107 @@
+.navigation {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation > li {
+  color: #ffff;
+  flex: 0 0 auto;
+  // margin-top: -5rem;
+  padding: 0.4rem;
+
+  text-align: center;
+  height: 3.5rem;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.navigation li a {
+  // margin: 0.4rem auto;
+  color: rgb(234, 239, 240);
+  text-decoration: none;
+}
+.navigation li svg {
+  margin: 0.4rem auto;
+  margin-top: -0.8rem;
+}
+
+.active,
+.navigation li:not(:last-child):hover {
+  // background-color: rgb(8, 59, 59);
+  color: #ffff;
+  text-transform: capitalize;
+  background: var(--bg-grade);
+  border-radius: 0.4rem;
+}
+
+.submenu--1 {
+  display: none;
+  transition: all 0.5s;
+  border-radius: 0.5rem;
+}
+
+.navigation li a:hover .submenu--1 {
+  display: block;
+  position: absolute;
+  background: var(--bg-grade);
+  margin-top: 1.2rem;
+  height: 20rem;
+  overflow: scroll;
+  margin-left: -0.5rem;
+  z-index: 200;
+  border-bottom: 0.4rem solid red;
+}
+
+.navigation li a:hover .submenu--1 ul {
+  display: block;
+  margin-top: -1rem;
+  width: 100%;
+  background: var(--bg-grade);
+}
+
+.navigation li a:hover .submenu--1 ul li {
+  font-size: 1.6rem;
+  color: #fa5902;
+
+  padding: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: capitalize;
+  transition: all 0.3s;
+  box-shadow: 0 0.2rem 0.2rem 0.1rem #0b171cdd;
+  background: var(--bg-grade);
+}
+.navigation li a:hover .submenu--1 ul li:not(:last-child) {
+  border-bottom: 0.3rem solid rgb(22, 0, 0);
+  box-shadow: 0.2 0.3rem 0.4rem 0.1rem #020607dd;
+}
+
+.submenu__item:not(:last-child):hover {
+  margin-bottom: 0.6rem;
+  border-bottom: 0.3rem solid rgb(22, 0, 0);
+  box-shadow: 0.2 0.3rem 0.4rem 0.1rem #020607dd;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.2rem;
+}
+.drop-container::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0rem;
+}
+.drop-container::-webkit-scrollbar-track {
+  border-radius: 100vw;
+  margin-block: 0.2rem;
+}
+
+.drop-container::-webkit-scrollbar-thumb {
+  background-color: rgb(160, 250, 49);
+  border-radius: 100vw;
+}
+
+.drop-container::-webkit-scrollbar-thumb:hover,
+.drop-container::-webkit-scrollbar-thumb:active {
+  background-color: rgb(98, 255, 0);
+}

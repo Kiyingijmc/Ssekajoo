@@ -8,7 +8,7 @@
   padding: 1.25rem 4.5rem;
   border-radius: 10rem;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .btn:hover {
@@ -22,14 +22,12 @@
   font-size: 2.2rem;
   font-family: inherit;
   font-weight: 500;
-  color: rgb(9, 2, 59);
-  background: var(--primary-color);
+  //color: rgb(9, 2, 59);
+  background: $faded-gray;
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
   cursor: pointer;
-  border-radius: 10%;
-  transition: all 0.3s;
 }
 .transup {
   font-size: 2.5rem;
@@ -39,4 +37,9 @@
   border-bottom: none;
   transform: translateY(0.9rem);
   background: var(--gradient-oragered);
+}
+
+.donate:active {
+  transform: translateY(0.6rem) scale(0.93);
+  color: $color-secondary-dark--1;
 }

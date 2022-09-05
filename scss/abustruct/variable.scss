@@ -2,12 +2,13 @@ $color-transparent: #2fc6f8a8;
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
 $color-secondary-dark--1: #fa5902;
+$color-secondary-dark--2: #cb4801;
 
 $color-tertiary-light: #30c8fb;
 $color-tertiary-dark: #0472e8;
 
 $color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
+$color-grey-light-2: rgb(235, 240, 241);
 
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
@@ -15,7 +16,7 @@ $color-grey-dark-3: #333;
 
 $color-white: #fff;
 $color-black: #000;
-
+$screen: rgba(5, 5, 5, 0.386);
 //gredients
 // $faded-gray: linear-gradient(
 //   42deg,
@@ -71,6 +72,8 @@ $solidcolor-gradient: linear-gradient(
   #ff7830bb,
   #ffffff00
 );
+
+$text-fade: linear-gradient(to top, #5a6368, #3c474d, #1b2328, #000000);
 
 $default-font-size: 1.6rem;
 $border-radi: 0.4rem;

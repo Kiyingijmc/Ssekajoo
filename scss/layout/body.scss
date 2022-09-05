@@ -2,11 +2,12 @@
   display: flex;
   height: 100rem;
   align-items: stretch;
+  justify-content: space-between;
   //padding: 1.8rem 1rem;
   margin: 1rem;
 }
 .sidebar {
-  flex: 0 0 25%;
+  flex: 0 0 30%;
   //border-right: 0.3rem solid rgb(255, 255, 255);
   margin-left: -2.5rem;
   display: flex;
@@ -17,25 +18,26 @@
     background-color: rgb(63, 4, 4);
     border-radius: $border-radi;
   }*/
-  &__contentarea {
-    flex: 0 0 60%;
-    border-radius: $border-radi;
-    //background-color: rgb(28, 104, 56);
-  }
-  &__summaryarea {
-    flex: 0 0 40%;
-    border-radius: $border-radi;
-    //background-color: rgb(120, 115, 22);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    padding: 0.3rem;
-    z-index: 0;
-  }
+  // &__contentarea {
+  //   flex: 0 0 60%;
+  //   border-radius: $border-radi;
+  //   //background-color: rgb(28, 104, 56);
+  // }
+  // &__summaryarea {
+  //   flex: 0 0 40%;
+  //   border-radius: $border-radi;
+  //   //background-color: rgb(120, 115, 22);
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: stretch;
+  //   justify-content: center;
+  //   padding: 0.3rem;
+  //   z-index: 0;
+  // }
 }
 
 .mainsection {
+  position: relative;
   flex: 0 0 75%;
   //background: var(--gradient-secondary);
   display: flex;
@@ -81,7 +83,21 @@
     flex: 0 0 100%;
     width: 100%;
     padding: 0.6rem;
-    background-color: red;
+    background: linear-gradient(
+      42deg,
+      #aabac2,
+      #89a2ae,
+      #80929b,
+      #627985,
+      #43545d,
+      #2a3d46,
+      #17252d,
+      #0b171c,
+      #051015,
+      #060606
+    );
+    background-size: 400%;
+    background-position: left;
     border-radius: $border-radi;
   }
 }
